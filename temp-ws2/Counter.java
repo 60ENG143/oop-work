@@ -1,18 +1,19 @@
+
 public class Counter{
 	private int initial;
 	private int value;
 
 	public Counter(){
-		this.initial = 0;
+		this(0);
 	}
 
 	public Counter(int initial){
-		this.value = initial;
+		this.value = 0;
 		this.initial = initial;
 	}
 
 	public void count(){
-		value ++;
+		value += initial;
 	}
 
 	public int getValue(){
@@ -20,6 +21,6 @@ public class Counter{
 	}
 
 	public void reset(){
-		value = initial;
+		value = 0;
 	}
 }
