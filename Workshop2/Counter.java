@@ -12,13 +12,8 @@ public class Counter{
 		this.initial = initial;
 	}
 
-<<<<<<< HEAD:Workshop2/Counter.java
 	public void count(int input){
 		value += input;
-=======
-	public void count(){
-		value += initial;
->>>>>>> 53707f6363e40f11ee68cbaccca859234b13d02a:temp-ws2/Counter.java
 	}
 
 	public int getValue(){

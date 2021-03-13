@@ -14,11 +14,7 @@ public class Main {
 }
 
 class MyFrame extends JFrame {
-<<<<<<< HEAD:Workshop2/Main.java
-    private static final String[] FACES = new String[]{ "1", "2", "3"};
-=======
     private static final String[] FACES = new String[]{"+1", "+2", "+3"};
->>>>>>> 53707f6363e40f11ee68cbaccca859234b13d02a:temp-ws2/Main.java
 	private JLabel label;
 	private Counter counter;
 	private JButton btn;
@@ -44,7 +40,7 @@ class MyFrame extends JFrame {
 		counter = new Counter(1);
 
 		label = new JLabel("" + counter.getValue());
-		label.setFont(label.getFont().deriveFont(18.0f));
+		label.setFont(label.getFont().deriveFont(32.0f));
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
 		
