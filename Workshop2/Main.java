@@ -14,7 +14,7 @@ public class Main {
 }
 
 class MyFrame extends JFrame {
-    private static final String[] FACES = new String[]{"1", "2", "3"};
+    private static final String[] FACES = new String[]{ "1", "2", "3"};
 	private JLabel label;
 	private Counter counter;
 	private JButton btn;
@@ -26,7 +26,7 @@ class MyFrame extends JFrame {
 		GridLayout layout = new GridLayout(0, 3);
 
 		facesPanel.setLayout(layout);
-
+		
 		for(String face : FACES){
             	btn = new JButton(face);
             	btn.addActionListener(new MyActionListener());
@@ -52,8 +52,8 @@ class MyFrame extends JFrame {
     }
 
     class MyActionListener implements ActionListener{		
-        public void actionPerformed(ActionEvent e) { 
-            counter.count();
+        public void actionPerformed(ActionEvent e) {
+			counter.count(1);
             label.setText("" + counter.getValue());
         }
     }
