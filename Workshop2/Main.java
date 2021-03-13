@@ -14,7 +14,11 @@ public class Main {
 }
 
 class MyFrame extends JFrame {
+<<<<<<< HEAD:Workshop2/Main.java
     private static final String[] FACES = new String[]{ "1", "2", "3"};
+=======
+    private static final String[] FACES = new String[]{"+1", "+2", "+3"};
+>>>>>>> 53707f6363e40f11ee68cbaccca859234b13d02a:temp-ws2/Main.java
 	private JLabel label;
 	private Counter counter;
 	private JButton btn;
@@ -36,8 +40,8 @@ class MyFrame extends JFrame {
 		this.getContentPane().setLayout(new BorderLayout());
 
         this.add(facesPanel, BorderLayout.PAGE_END);
-		
-        counter = new Counter();
+
+		counter = new Counter(1);
 
 		label = new JLabel("" + counter.getValue());
 		label.setFont(label.getFont().deriveFont(18.0f));
@@ -47,8 +51,15 @@ class MyFrame extends JFrame {
 		this.add(label, BorderLayout.CENTER);
 
         JButton btn_reset = new JButton("Reset");
-		btn_reset.addActionListener(new MyActionListener());
+		btn_reset.addActionListener(new MyActionReset());
 		this.add(btn_reset, BorderLayout.PAGE_START);
+    }
+
+	class MyActionReset implements ActionListener{		
+        public void actionPerformed(ActionEvent e) { 
+            counter.reset();
+            label.setText("" + counter.getValue());
+        }
     }
 
     class MyActionListener implements ActionListener{		
